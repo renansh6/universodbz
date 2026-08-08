@@ -128,8 +128,9 @@ function Index() {
           Pagamento único. Sem mensalidade, sem anúncio, sem enrolação.
         </p>
 
-        <div className="mt-6 space-y-4 text-left">
-          <div className="rounded-xl border border-border p-4">
+        <div className="mt-6 grid grid-cols-1 gap-4 text-left sm:grid-cols-2 sm:items-start">
+          <div className="flex h-full flex-col rounded-xl border border-border p-4">
+
             <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
               Acesso DRAGONVERSO
             </p>
