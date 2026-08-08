@@ -32,15 +32,12 @@ const beneficios = [
 ];
 
 const mangas = [
-  "Saga O Casamento de Goku",
-  "Saga Piccolo Junior",
-  "Saga Piccolo Daimaoh",
-  "Saga 22° Torneio de Artes Marciais",
-  "Saga Red Ribbon",
-  "Saga do 21° Torneio de Artes Marciais",
-  "Saga Pilaf",
-  "Dragon Ball (Perfect Edition)",
+  "Saga Saiyajins",
+  "Saga Freeza",
+  "Saga Cell",
+  "Saga Boo completa",
 ];
+
 
 const faq = [
   {
