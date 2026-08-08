@@ -71,13 +71,16 @@ function Index() {
   return (
     <main className="mx-auto w-full max-w-[720px] px-5 pb-20">
       <section className="pt-2 text-center">
-        <img
-          src={heroAsset.url}
-          alt="Guerreiro de kimono laranja sobre faixa vermelha"
-          width={943}
-          height={1697}
-          className="mx-auto h-auto w-full max-w-[190px] sm:max-w-[230px]"
-        />
+        <div className="mx-auto w-full overflow-hidden">
+          <img
+            src={heroAsset.url}
+            alt="Guerreiro de kimono laranja sobre faixa vermelha"
+            width={943}
+            height={1697}
+            className="mx-auto h-[240px] w-full object-cover object-top sm:h-[380px]"
+          />
+        </div>
+
 
         <h1 className="mt-2 text-balance text-2xl leading-[1.05] sm:text-4xl">
           <span className="mb-3 inline-block bg-primary px-3 py-1 text-sm font-bold sm:text-lg">
