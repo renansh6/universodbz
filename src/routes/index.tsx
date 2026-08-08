@@ -31,12 +31,8 @@ const beneficios = [
   "Você recebe imediatamente no seu e-mail",
 ];
 
-const mangas = [
-  "Saga Saiyajins",
-  "Saga Freeza",
-  "Saga Cell",
-  "Saga Boo completa",
-];
+const mangas = ["Saga Saiyajins", "Saga Cell", "Saga Boo completa"];
+
 
 
 const faq = [
