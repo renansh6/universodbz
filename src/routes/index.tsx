@@ -31,16 +31,9 @@ const beneficios = [
   "Você recebe imediatamente no seu e-mail",
 ];
 
-const mangas = [
-  "Saga O Casamento de Goku",
-  "Saga Piccolo Junior",
-  "Saga Piccolo Daimaoh",
-  "Saga 22° Torneio de Artes Marciais",
-  "Saga Red Ribbon",
-  "Saga do 21° Torneio de Artes Marciais",
-  "Saga Pilaf",
-  "Dragon Ball (Perfect Edition)",
-];
+const mangas = ["Saga Saiyajins", "Saga Cell", "Saga Boo completa"];
+
+
 
 const faq = [
   {
@@ -70,23 +63,26 @@ function Index() {
           alt="Guerreiro de kimono laranja sobre faixa vermelha"
           width={943}
           height={1697}
-          className="mx-auto w-full max-w-[320px]"
+          className="mx-auto h-auto w-full max-w-[190px] sm:max-w-[230px]"
         />
 
-        <h1 className="mt-2 text-balance text-3xl leading-[1.05] sm:text-5xl">
-          <span className="mb-3 inline-block bg-primary px-3 py-1 text-base font-bold sm:text-xl">
+        <h1 className="mt-2 text-balance text-2xl leading-[1.05] sm:text-4xl">
+          <span className="mb-3 inline-block bg-primary px-3 py-1 text-sm font-bold sm:text-lg">
             Tenha acesso a todas as animações
           </span>
           <br />
-          DO UNIVERSO DRAGON BALL
+          DE DRAGON BALL
         </h1>
 
         <p className="mx-auto mt-4 max-w-[34ch] text-sm font-semibold text-muted-foreground sm:text-base">
-          Agora você pode assistir a todas as animações e filmes do UNIVERSO DRAGON BALL em alta
-          qualidade e sem nenhum anúncio aparecendo na tela!
+          Agora você pode assistir a todas as animações e filmes de DRAGON BALL em alta qualidade e
+          sem nenhum anúncio aparecendo na tela!
         </p>
 
-        <p className="mt-7 text-lg font-bold text-gold">🕷️ Você recebe imediatamente tudo isso:</p>
+        <p className="mt-7 text-base font-bold text-gold sm:text-lg">
+          🐉 Você recebe imediatamente tudo isso:
+        </p>
+
       </section>
 
       <section className="mt-5 text-left">
@@ -132,8 +128,9 @@ function Index() {
           Pagamento único. Sem mensalidade, sem anúncio, sem enrolação.
         </p>
 
-        <div className="mt-6 space-y-4 text-left">
-          <div className="rounded-xl border border-border p-4">
+        <div className="mt-6 grid grid-cols-1 gap-4 text-left sm:grid-cols-2 sm:items-start">
+          <div className="flex h-full flex-col rounded-xl border border-border p-4">
+
             <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
               Acesso DRAGONVERSO
             </p>
@@ -144,14 +141,15 @@ function Index() {
               Todas as animações e filmes em 1080p dublados + entrega no E-mail.
             </p>
             <a
-              href="https://ggcheckout.app/checkout/v5/IZYepkfVQZxG6W3eyMKm"
-              className="cta-glow mt-4 flex w-full items-center justify-center rounded-xl bg-primary px-4 py-4 text-base font-bold text-primary-foreground transition-transform hover:scale-[1.02]"
+              href="https://ggcheckout.app/checkout/v2/eGBQp6pUBIpzkxGl5jJI"
+              className="cta-glow mt-6 flex w-full items-center justify-center rounded-md bg-primary px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-primary-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero entrar no Dragonverso
             </a>
+
           </div>
 
-          <div className="rounded-xl border-2 border-primary p-4">
+          <div className="flex h-full flex-col rounded-xl border-2 border-primary p-4">
             <p className="text-xs font-bold uppercase tracking-widest text-gold">
               Combo KAMEHAMEHA · mais escolhido
             </p>
@@ -171,11 +169,12 @@ function Index() {
               ))}
             </ul>
             <a
-              href="https://ggcheckout.app/checkout/v5/hYLEtB66GDUVxwSI7jdS"
-              className="cta-glow mt-4 flex w-full items-center justify-center rounded-xl bg-primary px-4 py-4 text-base font-bold text-primary-foreground transition-transform hover:scale-[1.02]"
+              href="https://ggcheckout.app/checkout/v2/kcadVa83rqYfqnRwH5Ve"
+              className="mt-6 flex w-full items-center justify-center rounded-md bg-gold px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-background underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero o Combo KAMEHAMEHA
             </a>
+
           </div>
         </div>
 
