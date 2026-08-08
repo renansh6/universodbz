@@ -31,7 +31,20 @@ const beneficios = [
   "Você recebe imediatamente no seu e-mail",
 ];
 
-const mangas = ["Saga Saiyajins", "Saga Cell", "Saga Boo completa"];
+const mangas = [
+  "Saga O Casamento de Goku",
+  "Saga Piccolo Junior",
+  "Saga Piccolo Daimaoh",
+  "Saga 22° Torneio de Artes Marciais",
+  "Saga Red Ribbon",
+  "Saga do 21° Torneio de Artes Marciais",
+  "Saga Pilaf",
+  "Dragon Ball (Perfect Edition)",
+  "Saga Saiyajins",
+  "Saga Freeza",
+  "Saga Cel",
+  "Saga Boo completa",
+];
 
 
 
@@ -128,7 +141,7 @@ function Index() {
           Pagamento único. Sem mensalidade, sem anúncio, sem enrolação.
         </p>
 
-        <div className="mt-6 grid grid-cols-1 gap-4 text-left sm:grid-cols-2 sm:items-start">
+        <div className="mt-6 grid grid-cols-1 gap-4 text-left">
           <div className="flex h-full flex-col rounded-xl border border-border p-4">
 
             <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
