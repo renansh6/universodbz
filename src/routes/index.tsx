@@ -1,20 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-aranha.jpg";
-import comboImg from "@/assets/oferta-combo.jpg";
+import heroAsset from "@/assets/hero-goku.png.asset.json";
+import comboAsset from "@/assets/combo-db.jpg.asset.json";
+import videoAsset from "@/assets/video-dbz.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aranhaverso — Todas as Animações e HQs do Herói Aranha" },
+      { title: "Dragonverso — Todos os Filmes e Animações de Dragon Ball" },
       {
         name: "description",
         content:
-          "Acesso imediato a todas as animações em 1080p dubladas e à maior coleção de HQs do herói aranha. Entrega no WhatsApp e e-mail.",
+          "Acesso imediato a todas as animações e filmes de Dragon Ball em 1080p dublados, mais 40 mangás. Entrega imediata no e-mail.",
       },
-      { property: "og:title", content: "Aranhaverso — Animações e HQs em um só lugar" },
+      { property: "og:title", content: "Dragonverso — Animações e Mangás de Dragon Ball" },
       {
         property: "og:description",
-        content: "Todas as animações em 1080p dubladas + coleção completa de HQs. Acesso vitalício.",
+        content: "Todos os filmes e animações em 1080p dublados + coleção de mangás. Acesso vitalício.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -24,16 +25,27 @@ export const Route = createFileRoute("/")({
 });
 
 const beneficios = [
-  "O acesso à maior coleção de HQ's e animações do herói aranha",
+  "Todos filmes de Dragon Ball e especiais reunidos em um só lugar",
   "Todas as animações em 1080p e dubladas em português",
   "Todas as HQ's clássicas e modernas na maior qualidade",
-  "Você recebe imediatamente no seu WhatsApp e e-mail",
+  "Você recebe imediatamente no seu e-mail",
+];
+
+const mangas = [
+  "Saga O Casamento de Goku",
+  "Saga Piccolo Junior",
+  "Saga Piccolo Daimaoh",
+  "Saga 22° Torneio de Artes Marciais",
+  "Saga Red Ribbon",
+  "Saga do 21° Torneio de Artes Marciais",
+  "Saga Pilaf",
+  "Dragon Ball (Perfect Edition)",
 ];
 
 const faq = [
   {
     q: "Como eu recebo o acesso?",
-    a: "Logo após a confirmação do pagamento você recebe o link de acesso no WhatsApp e no e-mail cadastrados na compra.",
+    a: "Logo após a confirmação do pagamento você recebe o link de acesso no e-mail cadastrado na compra.",
   },
   {
     q: "O acesso é vitalício?",
@@ -54,31 +66,31 @@ function Index() {
     <main className="mx-auto w-full max-w-[720px] px-5 pb-20">
       <section className="pt-2 text-center">
         <img
-          src={heroImg}
-          alt="Herói aranha mascarado de braços cruzados sobre faixa vermelha"
-          width={1024}
-          height={1024}
-          className="mx-auto w-full max-w-[420px]"
+          src={heroAsset.url}
+          alt="Guerreiro de kimono laranja sobre faixa vermelha"
+          width={943}
+          height={1697}
+          className="mx-auto w-full max-w-[320px]"
         />
 
-        <h1 className="-mt-6 text-balance text-3xl leading-[1.05] sm:text-5xl">
+        <h1 className="mt-2 text-balance text-3xl leading-[1.05] sm:text-5xl">
           <span className="mb-3 inline-block bg-primary px-3 py-1 text-base font-bold sm:text-xl">
             Tenha acesso a todas as animações
           </span>
           <br />
-          DO HERÓI ARANHA
+          DO UNIVERSO DRAGON BALL
         </h1>
 
         <p className="mx-auto mt-4 max-w-[34ch] text-sm font-semibold text-muted-foreground sm:text-base">
-          Agora você pode assistir a todas as animações e filmes do herói aranha em alta qualidade e
-          sem nenhum anúncio aparecendo na tela!
+          Agora você pode assistir a todas as animações e filmes do UNIVERSO DRAGON BALL em alta
+          qualidade e sem nenhum anúncio aparecendo na tela!
         </p>
 
         <p className="mt-7 text-lg font-bold text-gold">🕷️ Você recebe imediatamente tudo isso:</p>
       </section>
 
       <section className="mt-5 text-left">
-        <p className="text-sm text-muted-foreground">Você receberá imediatamente no seu WhatsApp:</p>
+        <p className="text-sm text-muted-foreground">Você receberá imediatamente no seu e-mail:</p>
         <ul className="mt-3 space-y-2">
           {beneficios.map((b) => (
             <li key={b} className="flex gap-2 text-sm font-semibold sm:text-base">
@@ -95,20 +107,20 @@ function Index() {
         </span>
 
         <div className="mt-3 aspect-video w-full overflow-hidden rounded-xl border border-border bg-card">
-          <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-2xl">
-              ▶
-            </span>
-            <p className="text-sm font-bold">Clique para assistir</p>
-            <p className="text-xs text-muted-foreground">Prévia do acervo — 2 min</p>
-          </div>
+          <video
+            src={videoAsset.url}
+            controls
+            playsInline
+            preload="metadata"
+            className="h-full w-full object-contain"
+          />
         </div>
       </section>
 
       <section className="mt-10 rounded-2xl border border-border bg-card p-5 text-center">
         <img
-          src={comboImg}
-          alt="Acervo de animações e HQs aberto em celular, tablet e notebook"
+          src={comboAsset.url}
+          alt="Acervo de animações e mangás de Dragon Ball em celular, tablet e notebook"
           width={1024}
           height={768}
           loading="lazy"
@@ -123,38 +135,46 @@ function Index() {
         <div className="mt-6 space-y-4 text-left">
           <div className="rounded-xl border border-border p-4">
             <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-              Acesso Aranhaverso
+              Acesso DRAGONVERSO
             </p>
             <p className="mt-1 text-3xl font-bold">
-              R$ 27<span className="text-base font-semibold text-muted-foreground"> à vista</span>
+              R$ 6,90<span className="text-base font-semibold text-muted-foreground"> à vista</span>
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Todas as animações e filmes em 1080p dublados + entrega no WhatsApp.
+              Todas as animações e filmes em 1080p dublados + entrega no E-mail.
             </p>
             <a
               href="https://ggcheckout.app/checkout/v5/IZYepkfVQZxG6W3eyMKm"
               className="cta-glow mt-4 flex w-full items-center justify-center rounded-xl bg-primary px-4 py-4 text-base font-bold text-primary-foreground transition-transform hover:scale-[1.02]"
             >
-              Quero entrar no Aranhaverso
+              Quero entrar no Dragonverso
             </a>
           </div>
 
           <div className="rounded-xl border-2 border-primary p-4">
             <p className="text-xs font-bold uppercase tracking-widest text-gold">
-              Combo Teioso · mais escolhido
+              Combo KAMEHAMEHA · mais escolhido
             </p>
             <p className="mt-1 text-3xl font-bold">
-              R$ 47<span className="text-base font-semibold text-muted-foreground"> à vista</span>
+              R$ 9,90<span className="text-base font-semibold text-muted-foreground"> à vista</span>
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Tudo do plano anterior + coleção completa de HQ's clássicas e modernas em alta
-              qualidade.
+              Tudo do plano anterior + Coleção com 40 mangás de Dragon Ball modernas em alta
+              qualidade
             </p>
+            <ul className="mt-3 space-y-1.5">
+              {mangas.map((m) => (
+                <li key={m} className="flex gap-2 text-sm text-muted-foreground">
+                  <span className="text-primary">✔</span>
+                  <span>{m}</span>
+                </li>
+              ))}
+            </ul>
             <a
               href="https://ggcheckout.app/checkout/v5/hYLEtB66GDUVxwSI7jdS"
               className="cta-glow mt-4 flex w-full items-center justify-center rounded-xl bg-primary px-4 py-4 text-base font-bold text-primary-foreground transition-transform hover:scale-[1.02]"
             >
-              Quero o Combo Teioso
+              Quero o Combo KAMEHAMEHA
             </a>
           </div>
         </div>
@@ -177,7 +197,7 @@ function Index() {
       </section>
 
       <footer className="mt-12 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-        <p>Aranhaverso © {new Date().getFullYear()} — Todos os direitos reservados.</p>
+        <p>Dragonverso © {new Date().getFullYear()} — Todos os direitos reservados.</p>
         <p className="mt-2">
           Este site não é afiliado a nenhuma editora ou estúdio. Conteúdo de acervo pessoal.
         </p>
