@@ -154,7 +154,7 @@ function Index() {
               R$ 6,90<span className="text-base font-semibold text-muted-foreground"> à vista</span>
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Todas as animações e filmes em 1080p dublados + entrega no E-mail.
+              Filmes em 1080p dublados + entrega no E-mail.
             </p>
             <a
               href="https://ggcheckout.app/checkout/v2/eGBQp6pUBIpzkxGl5jJI"
