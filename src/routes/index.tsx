@@ -168,11 +168,12 @@ function Index() {
               ))}
             </ul>
             <a
-              href="https://ggcheckout.app/checkout/v5/hYLEtB66GDUVxwSI7jdS"
-              className="cta-glow mt-4 flex w-full items-center justify-center rounded-xl bg-primary px-4 py-4 text-base font-bold text-primary-foreground transition-transform hover:scale-[1.02]"
+              href="https://ggcheckout.app/checkout/v2/kcadVa83rqYfqnRwH5Ve"
+              className="mt-4 flex w-full items-center justify-center rounded-md bg-gold px-4 py-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-background underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero o Combo KAMEHAMEHA
             </a>
+
           </div>
         </div>
 
