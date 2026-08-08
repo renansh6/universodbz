@@ -142,7 +142,7 @@ function Index() {
             </p>
             <a
               href="https://ggcheckout.app/checkout/v2/eGBQp6pUBIpzkxGl5jJI"
-              className="cta-glow mt-4 flex w-full items-center justify-center rounded-md bg-primary px-4 py-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-primary-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
+              className="cta-glow mt-auto flex w-full items-center justify-center rounded-md bg-primary px-4 py-4 mt-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-primary-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero entrar no Dragonverso
             </a>
@@ -170,7 +170,7 @@ function Index() {
             </ul>
             <a
               href="https://ggcheckout.app/checkout/v2/kcadVa83rqYfqnRwH5Ve"
-              className="mt-4 flex w-full items-center justify-center rounded-md bg-gold px-4 py-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-background underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
+              className="mt-auto flex w-full items-center justify-center rounded-md bg-gold px-4 py-4 mt-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-background underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero o Combo KAMEHAMEHA
             </a>
