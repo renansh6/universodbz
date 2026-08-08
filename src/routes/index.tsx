@@ -140,11 +140,12 @@ function Index() {
               Todas as animações e filmes em 1080p dublados + entrega no E-mail.
             </p>
             <a
-              href="https://ggcheckout.app/checkout/v5/IZYepkfVQZxG6W3eyMKm"
-              className="cta-glow mt-4 flex w-full items-center justify-center rounded-xl bg-primary px-4 py-4 text-base font-bold text-primary-foreground transition-transform hover:scale-[1.02]"
+              href="https://ggcheckout.app/checkout/v2/eGBQp6pUBIpzkxGl5jJI"
+              className="cta-glow mt-4 flex w-full items-center justify-center rounded-md bg-primary px-4 py-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-primary-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero entrar no Dragonverso
             </a>
+
           </div>
 
           <div className="rounded-xl border-2 border-primary p-4">
