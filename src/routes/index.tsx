@@ -63,23 +63,26 @@ function Index() {
           alt="Guerreiro de kimono laranja sobre faixa vermelha"
           width={943}
           height={1697}
-          className="mx-auto w-full max-w-[320px]"
+          className="mx-auto h-auto w-full max-w-[190px] sm:max-w-[230px]"
         />
 
-        <h1 className="mt-2 text-balance text-3xl leading-[1.05] sm:text-5xl">
-          <span className="mb-3 inline-block bg-primary px-3 py-1 text-base font-bold sm:text-xl">
+        <h1 className="mt-2 text-balance text-2xl leading-[1.05] sm:text-4xl">
+          <span className="mb-3 inline-block bg-primary px-3 py-1 text-sm font-bold sm:text-lg">
             Tenha acesso a todas as animações
           </span>
           <br />
-          DO UNIVERSO DRAGON BALL
+          DE DRAGON BALL
         </h1>
 
         <p className="mx-auto mt-4 max-w-[34ch] text-sm font-semibold text-muted-foreground sm:text-base">
-          Agora você pode assistir a todas as animações e filmes do UNIVERSO DRAGON BALL em alta
-          qualidade e sem nenhum anúncio aparecendo na tela!
+          Agora você pode assistir a todas as animações e filmes de DRAGON BALL em alta qualidade e
+          sem nenhum anúncio aparecendo na tela!
         </p>
 
-        <p className="mt-7 text-lg font-bold text-gold">🕷️ Você recebe imediatamente tudo isso:</p>
+        <p className="mt-7 text-base font-bold text-gold sm:text-lg">
+          🐉 Você recebe imediatamente tudo isso:
+        </p>
+
       </section>
 
       <section className="mt-5 text-left">
