@@ -149,7 +149,7 @@ function Index() {
 
           </div>
 
-          <div className="rounded-xl border-2 border-primary p-4">
+          <div className="flex h-full flex-col rounded-xl border-2 border-primary p-4">
             <p className="text-xs font-bold uppercase tracking-widest text-gold">
               Combo KAMEHAMEHA · mais escolhido
             </p>
