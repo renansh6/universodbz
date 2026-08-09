@@ -229,7 +229,7 @@ function Index() {
 
         <div className="mt-6 grid grid-cols-1 gap-4 text-left">
           <div className="flex h-full flex-col rounded-xl border border-border p-4">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+            <p className="text-base font-bold uppercase tracking-widest text-muted-foreground sm:text-lg">
               Acesso DRAGONVERSO
             </p>
             <p className="mt-1 text-3xl font-bold">
@@ -258,8 +258,8 @@ function Index() {
             </a>
           </div>
 
-          <div className="flex h-full flex-col rounded-xl border-2 border-primary p-4">
-            <p className="text-xs font-bold uppercase tracking-widest text-gold">
+          <div className="flex h-full flex-col rounded-xl border-2 border-success p-4">
+            <p className="text-base font-bold uppercase tracking-widest text-gold sm:text-lg">
               Combo KAMEHAMEHA · mais escolhido
             </p>
             <p className="mt-1 text-3xl font-bold">
@@ -272,12 +272,10 @@ function Index() {
               🎬 24 filmes inclusos:
             </p>
             <ul className="mt-2 grid grid-cols-1 gap-x-4 gap-y-1.5 sm:grid-cols-2">
-              {filmes.map((f, i) => (
+              {filmes.map((f) => (
                 <li key={f} className="flex gap-2 text-sm">
                   <span className="text-primary">✓</span>
-                  <span>
-                    {i + 1}. {f}
-                  </span>
+                  <span>{f}</span>
                 </li>
               ))}
             </ul>
