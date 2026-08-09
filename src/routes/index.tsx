@@ -228,13 +228,14 @@ function Index() {
         </p>
 
         <div className="mt-6 grid grid-cols-1 gap-4 text-left">
-          <div className="flex h-full flex-col rounded-xl border border-border p-4">
-            <p className="text-base font-bold uppercase tracking-widest text-muted-foreground sm:text-lg">
+          <div className="flex h-full flex-col rounded-xl border-2 border-primary p-4">
+            <p className="text-center text-base font-bold uppercase tracking-widest text-muted-foreground sm:text-lg">
               Acesso DRAGONVERSO
             </p>
-            <p className="mt-1 text-3xl font-bold">
+            <p className="mt-1 text-center text-3xl font-bold">
               R$ 6,90<span className="text-base font-semibold text-muted-foreground"> à vista</span>
             </p>
+
             <p className="mt-2 text-sm text-muted-foreground">
               Todas as séries e especiais de Dragon Ball em um só lugar.
             </p>
@@ -259,12 +260,13 @@ function Index() {
           </div>
 
           <div className="flex h-full flex-col rounded-xl border-2 border-success p-4">
-            <p className="text-base font-bold uppercase tracking-widest text-gold sm:text-lg">
+            <p className="text-center text-base font-bold uppercase tracking-widest text-gold sm:text-lg">
               Combo KAMEHAMEHA · mais escolhido
             </p>
-            <p className="mt-1 text-3xl font-bold">
+            <p className="mt-1 text-center text-3xl font-bold">
               R$ 9,90<span className="text-base font-semibold text-muted-foreground"> à vista</span>
             </p>
+
             <p className="mt-2 text-sm text-muted-foreground">
               Tudo do plano anterior + coleção completa de filmes de Dragon Ball.
             </p>
