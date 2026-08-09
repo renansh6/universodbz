@@ -204,6 +204,7 @@ function Index() {
             </p>
             <a
               href="https://ggcheckout.app/checkout/v2/eGBQp6pUBIpzkxGl5jJI"
+              onClick={handleCheckout("Acesso DRAGONVERSO", 6.9)}
               className="cta-glow mt-6 flex w-full items-center justify-center rounded-md bg-primary px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-primary-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero entrar no Dragonverso
