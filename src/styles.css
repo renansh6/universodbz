@@ -168,8 +168,8 @@
 
 @utility cta-glow {
   box-shadow:
-    0 0 0 1px color-mix(in oklab, var(--primary) 60%, transparent),
-    0 14px 40px -12px color-mix(in oklab, var(--primary) 70%, transparent);
+    0 0 0 1px color-mix(in oklab, var(--success) 60%, transparent),
+    0 14px 40px -12px color-mix(in oklab, var(--success) 70%, transparent);
 }
 
 @keyframes pulse-live {
