@@ -299,7 +299,7 @@ function Index() {
               ))}
             </ul>
             <a
-              href="https://ggcheckout.app/checkout/v2/eGBQp6pUBIpzkxGl5jJI"
+              href="https://ggcheckout.app/checkout/v5/eGBQp6pUBIpzkxGl5jJI"
               onClick={handleCheckout("Acesso DRAGONVERSO", 6.9)}
               className="cta-glow mt-6 flex w-full items-center justify-center rounded-md bg-success px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-success-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
@@ -336,7 +336,7 @@ function Index() {
               Coleção completa de 40 mangás de Dragon Ball em alta qualidade.
             </p>
             <a
-              href="https://ggcheckout.app/checkout/v2/kcadVa83rqYfqnRwH5Ve"
+              href="https://ggcheckout.app/checkout/v5/kcadVa83rqYfqnRwH5Ve"
               onClick={handleCheckout("Combo KAMEHAMEHA", 9.9)}
               className="mt-6 flex w-full items-center justify-center rounded-md bg-success px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-success-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
