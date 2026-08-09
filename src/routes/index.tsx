@@ -175,7 +175,7 @@ function Index() {
         <ul className="mt-3 space-y-2">
           {beneficios.map((b) => (
             <li key={b} className="flex gap-2 text-sm font-semibold sm:text-base">
-              <span className="text-primary">✔</span>
+              <span className="text-success">✔</span>
               <span>{b}</span>
             </li>
           ))}
@@ -198,15 +198,15 @@ function Index() {
         </div>
       </section>
 
-      <section className="mt-8 text-left">
-        <p className="text-sm text-muted-foreground">
+      <section className="mt-8 text-center">
+        <p className="text-xl font-extrabold leading-tight sm:text-2xl">
           Sabemos como é chato ficar horas procurando suas animações favoritas na internet e se
           deparar com sites estranhos, cheios de anúncios ou abas estranhas...
         </p>
-        <p className="mt-3 text-sm font-bold text-gold">
+        <p className="mt-4 text-sm font-bold sm:text-base">
           Por esse motivo nós criamos o nosso Universo Dragon Ball !
         </p>
-        <p className="mt-3 text-sm text-muted-foreground">
+        <p className="mt-1 text-sm font-semibold text-muted-foreground">
           Onde reunimos todas os filmes e series na melhor qualidade para você assistir sempre que
           quiser! E o melhor de tudo é que você não precisa se preocupar com anúncios!
         </p>
@@ -244,7 +244,7 @@ function Index() {
             <ul className="mt-2 space-y-1.5">
               {series.map((s) => (
                 <li key={s} className="flex gap-2 text-sm">
-                  <span className="text-primary">✓</span>
+                  <span className="text-success">✓</span>
                   <span>{s}</span>
                 </li>
               ))}
@@ -274,7 +274,7 @@ function Index() {
             <ul className="mt-2 grid grid-cols-1 gap-x-4 gap-y-1.5 sm:grid-cols-2">
               {filmes.map((f) => (
                 <li key={f} className="flex gap-2 text-sm">
-                  <span className="text-primary">✓</span>
+                  <span className="text-success">✓</span>
                   <span>{f}</span>
                 </li>
               ))}
