@@ -9,6 +9,8 @@
   --font-sans: "Barlow", system-ui, sans-serif;
   --color-web: var(--web);
   --color-gold: var(--gold);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
 }
 
 
