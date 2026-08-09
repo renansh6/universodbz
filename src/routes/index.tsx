@@ -116,6 +116,29 @@ function Index() {
     }
   }, []);
 
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const tryPlay = () => {
+      v.play().catch(() => {
+        v.muted = true;
+        setMuted(true);
+        v.play().catch(() => undefined);
+      });
+    };
+    tryPlay();
+    v.addEventListener("loadedmetadata", tryPlay);
+    return () => v.removeEventListener("loadedmetadata", tryPlay);
+  }, []);
+
+  const toggleMute = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = !v.muted;
+    setMuted(v.muted);
+    if (!v.muted) v.play().catch(() => undefined);
+  };
+
   const handleCheckout =
     (contentName: string, value: number) => (event: MouseEvent<HTMLAnchorElement>) => {
       event.preventDefault();
