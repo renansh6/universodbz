@@ -34,19 +34,42 @@ const beneficios = [
   "Você recebe imediatamente no seu e-mail",
 ];
 
-const mangas = [
-  "Saga O Casamento de Goku",
-  "Saga Piccolo Junior",
-  "Saga Piccolo Daimaoh",
-  "Saga 22° Torneio de Artes Marciais",
-  "Saga Red Ribbon",
-  "Saga do 21° Torneio de Artes Marciais",
-  "Saga Pilaf",
-  "Dragon Ball (Perfect Edition)",
-  "Saga Saiyajins",
-  "Saga Freeza",
-  "Saga Cel",
-  "Saga Boo completa",
+const series = [
+  "Dragon Ball",
+  "Dragon Ball Absalon",
+  "Dragon Ball Daima",
+  "Dragon Ball GT",
+  "Dragon Ball Kai",
+  "Dragon Ball Super",
+  "Dragon Ball Z",
+  "Super Dragon Ball Heroes",
+];
+
+const filmes = [
+  "A Lenda de Shenlong",
+  "A Bela Adormecida do Castelo Amaldiçoado",
+  "A Aventura Mística",
+  "Em Busca do Poder",
+  "O Legado de um Herói",
+  "Dragon Ball Super: Broly",
+  "Dragon Ball Super: Super Hero",
+  "Devolva-me Gohan",
+  "O Homem Mais Forte do Mundo",
+  "A Árvore do Poder",
+  "Goku, o Super Sayajin",
+  "Uma Vingança para Freeza",
+  "O Retorno de Cooler",
+  "O Retorno dos Andróides",
+  "O Poder Invencível",
+  "A Batalha Nos Dois Mundos",
+  "O Retorno do Guerreiro Lendário",
+  "O Combate Final: Bio-Broly",
+  "Uma Nova Fusão! Goku e Vegeta",
+  "O Ataque do Dragão",
+  "A Batalha dos Deuses",
+  "O Renascimento de Freeza",
+  "Dragon Ball Evolution",
+  "Dragon Ball: O Início da Magia",
 ];
 
 
