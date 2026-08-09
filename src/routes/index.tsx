@@ -164,13 +164,13 @@ function Index() {
           <span className="live-dot inline-block h-1.5 w-1.5 rounded-full bg-primary" />9 assistindo
         </span>
 
-        <div className="mt-3 aspect-video w-full overflow-hidden rounded-xl border border-border bg-card">
+        <div className="mt-3 w-full overflow-hidden rounded-xl">
           <video
             src={videoAsset.url}
             controls
             playsInline
             preload="metadata"
-            className="h-full w-full object-contain"
+            className="block h-auto w-full"
           />
         </div>
       </section>
