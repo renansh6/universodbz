@@ -35,42 +35,74 @@ const beneficios = [
 ];
 
 const series = [
-  "Dragon Ball",
-  "Dragon Ball Absalon",
-  "Dragon Ball Daima",
-  "Dragon Ball GT",
-  "Dragon Ball Kai",
-  "Dragon Ball Super",
+  "Todas as séries",
+  "Especiais",
+  "Dragon Ball clássico",
   "Dragon Ball Z",
+  "Dragon Ball GT",
+  "Dragon Ball Super",
+  "Dragon Ball Daima",
+  "Dragon Ball Kai",
   "Super Dragon Ball Heroes",
 ];
 
 const filmes = [
-  "A Lenda de Shenlong",
-  "A Bela Adormecida do Castelo Amaldiçoado",
-  "A Aventura Mística",
-  "Em Busca do Poder",
-  "O Legado de um Herói",
   "Dragon Ball Super: Broly",
   "Dragon Ball Super: Super Hero",
-  "Devolva-me Gohan",
-  "O Homem Mais Forte do Mundo",
-  "A Árvore do Poder",
-  "Goku, o Super Sayajin",
-  "Uma Vingança para Freeza",
-  "O Retorno de Cooler",
-  "O Retorno dos Andróides",
-  "O Poder Invencível",
-  "A Batalha Nos Dois Mundos",
-  "O Retorno do Guerreiro Lendário",
-  "O Combate Final: Bio-Broly",
-  "Uma Nova Fusão! Goku e Vegeta",
-  "O Ataque do Dragão",
   "A Batalha dos Deuses",
   "O Renascimento de Freeza",
-  "Dragon Ball Evolution",
-  "Dragon Ball: O Início da Magia",
+  "O Ataque do Dragão",
+  "O Retorno de Cooler",
 ];
+
+const depoimentos = [
+  {
+    nome: "Marcos Almeida",
+    iniciais: "MA",
+    texto:
+      "Cara, que nostalgia! Eu assistia Dragon Ball quando era criança e poder rever as sagas e filmes completos foi bom demais. Já estou maratonando tudo! 🔥",
+  },
+  {
+    nome: "Lucas Ferreira",
+    iniciais: "LF",
+    texto:
+      "Eu procurava fazia tempo uma coleção assim. Ter tudo organizado em um só lugar facilitou demais. Já comecei pelo Dragon Ball Z 😂🐉",
+  },
+  {
+    nome: "Rafael Santos",
+    iniciais: "RS",
+    texto:
+      "Minha infância inteira está aqui kkkkk. Comecei assistindo um episódio e quando percebi já estava horas maratonando. Valeu muito a pena! 🔥",
+  },
+];
+
+const comentarios = [
+  {
+    user: "joao_ferreira92",
+    iniciais: "JF",
+    texto: "Mano, isso aqui é nostalgia pura 😂 já comecei a rever Dragon Ball com meu filho!",
+    tempo: "2 h",
+  },
+  {
+    user: "carlos_dbz",
+    iniciais: "CD",
+    texto: "Finalmente encontrei os filmes que eu procurava fazia anos. Muito bom!",
+    tempo: "3 h",
+  },
+  {
+    user: "matheus_silva",
+    iniciais: "MS",
+    texto: "Já assisti Dragon Ball, agora vou começar o Z. Acervo absurdo 🔥🐉",
+    tempo: "4 h",
+  },
+  {
+    user: "bruno_oliveira",
+    iniciais: "BO",
+    texto: "Pra quem cresceu assistindo Dragon Ball, isso aqui é ouro ❤️",
+    tempo: "5 h",
+  },
+];
+
 
 
 
@@ -277,18 +309,13 @@ function Index() {
 
         <div className="mt-6 grid grid-cols-1 gap-4 text-left">
           <div className="flex h-full flex-col rounded-xl border-2 border-primary p-4">
-            <p className="text-center text-base font-bold uppercase tracking-widest text-muted-foreground sm:text-lg">
-              Acesso DRAGONVERSO
+            <p className="text-center text-lg font-bold uppercase tracking-widest text-muted-foreground sm:text-xl">
+              🐉 DRAGONVERSO
             </p>
-            <p className="mt-1 text-center text-3xl font-bold">
-              R$ 6,90<span className="text-base font-semibold text-muted-foreground"> à vista</span>
-            </p>
+            <p className="mt-1 text-center text-3xl font-bold">R$ 6,90</p>
 
-            <p className="mt-2 text-sm text-muted-foreground">
-              Todas as séries e especiais de Dragon Ball em um só lugar.
-            </p>
             <p className="mt-4 text-xs font-bold uppercase tracking-widest text-gold">
-              📺 Séries / especiais inclusos:
+              Você recebe:
             </p>
             <ul className="mt-2 space-y-1.5">
               {series.map((s) => (
@@ -303,23 +330,25 @@ function Index() {
               onClick={handleCheckout("Acesso DRAGONVERSO", 6.9)}
               className="cta-glow mt-6 flex w-full items-center justify-center rounded-md bg-success px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-success-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
-              Quero entrar no Dragonverso
+              Quero o Dragonverso
             </a>
           </div>
 
           <div className="flex h-full flex-col rounded-xl border-2 border-success p-4">
-            <p className="text-center text-base font-bold uppercase tracking-widest text-gold sm:text-lg">
-              Combo KAMEHAMEHA · mais escolhido
+            <p className="text-center text-lg font-bold uppercase tracking-widest text-gold sm:text-xl">
+              🔥 Combo Kamehameha
             </p>
-            <p className="mt-1 text-center text-3xl font-bold">
-              R$ 9,90<span className="text-base font-semibold text-muted-foreground"> à vista</span>
+            <p className="mt-1 text-center text-xs font-bold uppercase tracking-widest text-muted-foreground">
+              O mais escolhido
+            </p>
+            <p className="mt-1 text-center text-3xl font-bold">R$ 9,90</p>
+
+            <p className="mt-3 text-center text-sm font-bold">
+              Você recebe TUDO DO DRAGONVERSO +
             </p>
 
-            <p className="mt-2 text-sm text-muted-foreground">
-              Tudo do plano anterior + coleção completa de filmes de Dragon Ball.
-            </p>
             <p className="mt-4 text-xs font-bold uppercase tracking-widest text-gold">
-              🎬 24 filmes inclusos:
+              🎬 24 filmes
             </p>
             <ul className="mt-2 grid grid-cols-1 gap-x-4 gap-y-1.5 sm:grid-cols-2">
               {filmes.map((f) => (
@@ -329,27 +358,119 @@ function Index() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-xs font-bold uppercase tracking-widest text-gold">
-              📖 + 40 mangás inclusos:
+            <p className="mt-2 text-sm font-semibold text-muted-foreground">
+              +19 filmes no acervo
             </p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Coleção completa de 40 mangás de Dragon Ball em alta qualidade.
+
+            <p className="mt-4 flex gap-2 text-sm font-bold">
+              <span className="text-success">✓</span>
+              <span>📖 40 mangás</span>
             </p>
+            <p className="mt-1.5 flex gap-2 text-sm font-bold">
+              <span className="text-success">✓</span>
+              <span>🎥 Conteúdos extras</span>
+            </p>
+
+            <div className="mt-5 text-center">
+              <p className="text-sm font-bold text-gold">
+                → De: <span className="line-through">R$ 49,90</span>
+              </p>
+              <p className="mt-1 text-sm font-bold text-muted-foreground">Por apenas</p>
+              <p className="leading-none">
+                <span className="text-2xl font-extrabold text-primary align-top">R$</span>
+                <span className="text-5xl font-extrabold text-primary sm:text-6xl">9,90</span>
+              </p>
+            </div>
+
             <a
               href="https://ggcheckout.app/checkout/v5/kcadVa83rqYfqnRwH5Ve"
               onClick={handleCheckout("Combo KAMEHAMEHA", 9.9)}
               className="mt-6 flex w-full items-center justify-center rounded-md bg-success px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-success-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
-              Quero o Combo KAMEHAMEHA
+              Quero o Combo Completo
             </a>
           </div>
 
         </div>
 
+
         <p className="mt-5 text-xs text-muted-foreground">
           🔒 Compra 100% segura · Garantia incondicional de 7 dias
         </p>
       </section>
+
+      <section className="mt-12">
+        <h2 className="text-center text-xl sm:text-2xl">
+          💬 Acompanhe o feedback de quem já garantiu
+        </h2>
+        <p className="mx-auto mt-2 max-w-[42ch] text-center text-sm text-muted-foreground">
+          Acompanhe o depoimento de alguns dos milhares de fãs que já garantiram seu acesso ao nosso
+          acervo 🐉
+        </p>
+
+        <div className="mt-5 space-y-3">
+          {depoimentos.map((d) => (
+            <div key={d.nome} className="rounded-xl border border-border bg-card p-4">
+              <div className="flex items-center gap-3">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                  {d.iniciais}
+                </span>
+                <div>
+                  <p className="text-sm font-bold">{d.nome}</p>
+                  <p className="text-xs text-muted-foreground">· Via Instagram</p>
+                </div>
+              </div>
+              <p className="mt-2 text-sm text-gold">★★★★★</p>
+              <p className="mt-2 text-sm text-muted-foreground">“{d.texto}”</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-6 text-sm font-bold">Comentários</p>
+        <div className="mt-3 space-y-4">
+          {comentarios.map((c) => (
+            <div key={c.user} className="flex gap-3">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/20 text-[10px] font-bold text-primary">
+                {c.iniciais}
+              </span>
+              <div>
+                <p className="text-sm">
+                  <span className="font-bold">{c.user}</span>{" "}
+                  <span className="text-muted-foreground">comentou: “{c.texto}”</span>
+                </p>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  <span className="text-primary">♡</span> Responder · {c.tempo}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12 rounded-2xl border border-border bg-card p-6 text-center">
+        <h2 className="text-xl sm:text-2xl">
+          🐉 Pronto para entrar no universo Dragon Ball?
+        </h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Escolha seu acesso e comece a explorar seu acervo.
+        </p>
+
+        <p className="mt-5 text-base font-bold">DRAGONVERSO — R$ 6,90</p>
+        <p className="mt-1 text-sm text-muted-foreground">ou</p>
+        <p className="mt-1 text-base font-bold text-gold">🔥 COMBO KAMEHAMEHA — R$ 9,90</p>
+        <p className="mt-2 text-xs font-bold uppercase tracking-widest text-gold">
+          ⭐ Recomendado
+        </p>
+
+        <a
+          href="https://ggcheckout.app/checkout/v5/kcadVa83rqYfqnRwH5Ve"
+          onClick={handleCheckout("CTA Final Combo KAMEHAMEHA", 9.9)}
+          className="cta-glow mt-5 flex w-full items-center justify-center rounded-md bg-success px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-success-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
+        >
+          🔥 Quero o Combo Kamehameha
+        </a>
+      </section>
+
 
       <section className="mt-10">
         <h2 className="text-center text-2xl">Perguntas frequentes</h2>
