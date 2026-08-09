@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { TrackingScripts } from "../components/TrackingScripts";
+import { SocialProofPopup } from "../components/SocialProofPopup";
 
 function NotFoundComponent() {
   return (
@@ -130,6 +131,8 @@ function RootComponent() {
       <TrackingScripts />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <SocialProofPopup />
+
     </QueryClientProvider>
   );
 }
