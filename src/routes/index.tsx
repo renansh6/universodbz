@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, type MouseEvent } from "react";
 import heroAsset from "@/assets/hero-goku.png.asset.json";
 import comboAsset from "@/assets/combo-db.jpg.asset.json";
 import videoAsset from "@/assets/video-dbz.mp4.asset.json";
+import { trackPixel, withUtms, getTrackingContext } from "@/lib/tracking";
+import { trackServerEvent } from "@/lib/tracking.functions";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -68,6 +71,49 @@ const faq = [
 ];
 
 function Index() {
+  useEffect(() => {
+    const eventId = trackPixel(
+      "ViewContent",
+      { content_name: "Landing Dragonverso", currency: "BRL" },
+      { once: true },
+    );
+    if (eventId) {
+      void trackServerEvent({
+        data: {
+          eventName: "ViewContent",
+          eventId,
+          contentName: "Landing Dragonverso",
+          currency: "BRL",
+          ...getTrackingContext(),
+        },
+      }).catch(() => undefined);
+    }
+  }, []);
+
+  const handleCheckout =
+    (contentName: string, value: number) => (event: MouseEvent<HTMLAnchorElement>) => {
+      event.preventDefault();
+      const href = event.currentTarget.getAttribute("href") ?? "";
+      const eventId = trackPixel("InitiateCheckout", {
+        content_name: contentName,
+        value,
+        currency: "BRL",
+      });
+      if (eventId) {
+        void trackServerEvent({
+          data: {
+            eventName: "InitiateCheckout",
+            eventId,
+            contentName,
+            value,
+            currency: "BRL",
+            ...getTrackingContext(),
+          },
+        }).catch(() => undefined);
+      }
+      window.location.href = withUtms(href);
+    };
+
   return (
     <main className="mx-auto w-full max-w-[720px] px-5 pb-20">
       <section className="pt-2 text-center">
@@ -158,6 +204,7 @@ function Index() {
             </p>
             <a
               href="https://ggcheckout.app/checkout/v2/eGBQp6pUBIpzkxGl5jJI"
+              onClick={handleCheckout("Acesso DRAGONVERSO", 6.9)}
               className="cta-glow mt-6 flex w-full items-center justify-center rounded-md bg-primary px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-primary-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero entrar no Dragonverso
@@ -186,6 +233,7 @@ function Index() {
             </ul>
             <a
               href="https://ggcheckout.app/checkout/v2/kcadVa83rqYfqnRwH5Ve"
+              onClick={handleCheckout("Combo KAMEHAMEHA", 9.9)}
               className="mt-6 flex w-full items-center justify-center rounded-md bg-gold px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-background underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero o Combo KAMEHAMEHA
