@@ -94,6 +94,9 @@ const faq = [
 ];
 
 function Index() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
+
   useEffect(() => {
     const eventId = trackPixel(
       "ViewContent",
