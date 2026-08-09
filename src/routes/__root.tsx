@@ -12,7 +12,6 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { TrackingScripts } from "../components/TrackingScripts";
-import { SocialProofPopup } from "../components/SocialProofPopup";
 
 function NotFoundComponent() {
   return (
@@ -79,11 +78,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Dragonverso — O Universo de Dragon Ball em um Só Lugar" },
+      { name: "description", content: "Séries, filmes, especiais e mangás de Dragon Ball em um único acervo." },
+      { name: "author", content: "Dragonverso" },
+      { property: "og:title", content: "Dragonverso" },
+      { property: "og:description", content: "Séries, filmes, especiais e mangás de Dragon Ball em um único acervo." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
@@ -131,7 +130,6 @@ function RootComponent() {
       <TrackingScripts />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
-      <SocialProofPopup />
 
     </QueryClientProvider>
   );
