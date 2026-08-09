@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Web Weaver
+
+faça outro site igual a este https://universoaranha.lovable.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaerGLTtHXk81XM_FuF9Nm6zqH4Ad1DwzTQFUCVNeYpq5ekk_66t_J-8nUJRRA_aem_4aHe0tc3TVSewU1_e5i-fw&utm_id=97760_v0_s00_e0_tv3
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://universodbz.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/41c5d494-dfc2-4f3e-b758-38eb8c6aa2cd).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
