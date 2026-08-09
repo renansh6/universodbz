@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import heroAsset from "@/assets/hero-goku.png.asset.json";
 import comboAsset from "@/assets/combo-db.jpg.asset.json";
 import videoAsset from "@/assets/video-dbz.mp4.asset.json";
