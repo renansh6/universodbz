@@ -215,7 +215,6 @@ function Index() {
 
         <div className="mt-6 grid grid-cols-1 gap-4 text-left">
           <div className="flex h-full flex-col rounded-xl border border-border p-4">
-
             <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
               Acesso DRAGONVERSO
             </p>
@@ -223,16 +222,26 @@ function Index() {
               R$ 6,90<span className="text-base font-semibold text-muted-foreground"> à vista</span>
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Filmes em 1080p dublados + entrega no E-mail.
+              Todas as séries e especiais de Dragon Ball em um só lugar.
             </p>
+            <p className="mt-4 text-xs font-bold uppercase tracking-widest text-gold">
+              📺 Séries / especiais inclusos:
+            </p>
+            <ul className="mt-2 space-y-1.5">
+              {series.map((s) => (
+                <li key={s} className="flex gap-2 text-sm">
+                  <span className="text-primary">✓</span>
+                  <span>{s}</span>
+                </li>
+              ))}
+            </ul>
             <a
               href="https://ggcheckout.app/checkout/v2/eGBQp6pUBIpzkxGl5jJI"
               onClick={handleCheckout("Acesso DRAGONVERSO", 6.9)}
-              className="cta-glow mt-6 flex w-full items-center justify-center rounded-md bg-primary px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-primary-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
+              className="cta-glow mt-6 flex w-full items-center justify-center rounded-md bg-success px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-success-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero entrar no Dragonverso
             </a>
-
           </div>
 
           <div className="flex h-full flex-col rounded-xl border-2 border-primary p-4">
@@ -243,26 +252,36 @@ function Index() {
               R$ 9,90<span className="text-base font-semibold text-muted-foreground"> à vista</span>
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Tudo do plano anterior + Coleção com 40 mangás de Dragon Ball modernas em alta
-              qualidade
+              Tudo do plano anterior + coleção completa de filmes de Dragon Ball.
             </p>
-            <ul className="mt-3 space-y-1.5">
-              {mangas.map((m) => (
-                <li key={m} className="flex gap-2 text-sm text-muted-foreground">
-                  <span className="text-primary">✔</span>
-                  <span>{m}</span>
+            <p className="mt-4 text-xs font-bold uppercase tracking-widest text-gold">
+              🎬 24 filmes inclusos:
+            </p>
+            <ul className="mt-2 grid grid-cols-1 gap-x-4 gap-y-1.5 sm:grid-cols-2">
+              {filmes.map((f, i) => (
+                <li key={f} className="flex gap-2 text-sm">
+                  <span className="text-primary">✓</span>
+                  <span>
+                    {i + 1}. {f}
+                  </span>
                 </li>
               ))}
             </ul>
+            <p className="mt-4 text-xs font-bold uppercase tracking-widest text-gold">
+              📖 + 40 mangás inclusos:
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Coleção completa de 40 mangás de Dragon Ball em alta qualidade.
+            </p>
             <a
               href="https://ggcheckout.app/checkout/v2/kcadVa83rqYfqnRwH5Ve"
               onClick={handleCheckout("Combo KAMEHAMEHA", 9.9)}
-              className="mt-6 flex w-full items-center justify-center rounded-md bg-gold px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-background underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
+              className="mt-6 flex w-full items-center justify-center rounded-md bg-success px-4 pt-4 pb-4 text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-success-foreground underline underline-offset-4 transition-transform hover:scale-[1.02] sm:text-base"
             >
               Quero o Combo KAMEHAMEHA
             </a>
-
           </div>
+
         </div>
 
         <p className="mt-5 text-xs text-muted-foreground">
