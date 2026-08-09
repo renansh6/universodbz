@@ -71,6 +71,49 @@ const faq = [
 ];
 
 function Index() {
+  useEffect(() => {
+    const eventId = trackPixel(
+      "ViewContent",
+      { content_name: "Landing Dragonverso", currency: "BRL" },
+      { once: true },
+    );
+    if (eventId) {
+      void trackServerEvent({
+        data: {
+          eventName: "ViewContent",
+          eventId,
+          contentName: "Landing Dragonverso",
+          currency: "BRL",
+          ...getTrackingContext(),
+        },
+      }).catch(() => undefined);
+    }
+  }, []);
+
+  const handleCheckout =
+    (contentName: string, value: number) => (event: MouseEvent<HTMLAnchorElement>) => {
+      event.preventDefault();
+      const href = event.currentTarget.getAttribute("href") ?? "";
+      const eventId = trackPixel("InitiateCheckout", {
+        content_name: contentName,
+        value,
+        currency: "BRL",
+      });
+      if (eventId) {
+        void trackServerEvent({
+          data: {
+            eventName: "InitiateCheckout",
+            eventId,
+            contentName,
+            value,
+            currency: "BRL",
+            ...getTrackingContext(),
+          },
+        }).catch(() => undefined);
+      }
+      window.location.href = withUtms(href);
+    };
+
   return (
     <main className="mx-auto w-full max-w-[720px] px-5 pb-20">
       <section className="pt-2 text-center">
