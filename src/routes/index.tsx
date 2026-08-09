@@ -198,6 +198,20 @@ function Index() {
         </div>
       </section>
 
+      <section className="mt-8 text-left">
+        <p className="text-sm text-muted-foreground">
+          Sabemos como é chato ficar horas procurando suas animações favoritas na internet e se
+          deparar com sites estranhos, cheios de anúncios ou abas estranhas...
+        </p>
+        <p className="mt-3 text-sm font-bold text-gold">
+          Por esse motivo nós criamos o nosso Universo Dragon Ball !
+        </p>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Onde reunimos todas os filmes e series na melhor qualidade para você assistir sempre que
+          quiser! E o melhor de tudo é que você não precisa se preocupar com anúncios!
+        </p>
+      </section>
+
       <section className="mt-10 rounded-2xl border border-border bg-card p-5 text-center">
         <img
           src={comboAsset.url}
