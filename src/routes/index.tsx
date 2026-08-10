@@ -240,7 +240,8 @@ function Index() {
 
       <section className="mt-8">
         <span className="inline-flex items-center gap-2 rounded-full bg-primary/20 px-3 py-1 text-xs font-bold text-primary">
-          <span className="live-dot inline-block h-1.5 w-1.5 rounded-full bg-primary" />9 assistindo
+          <span className="live-dot inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+          {watching} assistindo
         </span>
 
         <div className="relative mt-3 w-full overflow-hidden rounded-xl">
