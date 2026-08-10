@@ -4,6 +4,7 @@ import { trackServerEvent } from "@/lib/tracking.functions";
 
 const UTMIFY_SCRIPT_ID = "utmify-loader";
 const UTMIFY_PIXEL_ID = "utmify-pixel-loader";
+const CLARITY_ID = "ms-clarity-loader";
 
 /**
  * Loads the Meta Pixel + UTMify scripts once, captures UTMs and fires a single
