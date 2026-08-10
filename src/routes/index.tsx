@@ -229,36 +229,17 @@ function Index() {
           {watching} assistindo
         </span>
 
-        <div className="relative mt-3 w-full overflow-hidden rounded-xl">
-          <video
-            ref={videoRef}
-            src={videoAsset.url}
-            controls
-            autoPlay
-            muted
-            playsInline
-            preload="metadata"
-            className="block h-auto w-full"
+        <div
+          className="relative mt-3 w-full overflow-hidden rounded-xl"
+          style={{ paddingTop: "179.27%" }}
+        >
+          <iframe
+            src="https://player.vimeo.com/video/1216857080?badge=0&autopause=0&player_id=0&app_id=58479"
+            title="vsl"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            className="absolute left-0 top-0 h-full w-full border-0"
           />
-          <button
-            type="button"
-            onClick={toggleMute}
-            aria-label={muted ? "Ativar som" : "Silenciar"}
-            className="absolute bottom-3 right-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur-sm transition hover:bg-black/90"
-          >
-            {muted ? (
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4.03v8.06A4.5 4.5 0 0016.5 12z" />
-                <path d="M19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.96 8.96 0 0021 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71z" />
-                <path stroke="currentColor" strokeWidth="2" d="M3 3l18 18" />
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4.03v8.06A4.5 4.5 0 0016.5 12z" />
-                <path d="M19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.96 8.96 0 0021 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71z" />
-              </svg>
-            )}
-          </button>
         </div>
       </section>
 
