@@ -128,6 +128,14 @@ const faq = [
 function Index() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
+  const [watching, setWatching] = useState(472);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setWatching((n) => n + Math.floor(Math.random() * 3) + 1);
+    }, 6000);
+    return () => clearInterval(id);
+  }, []);
 
   useEffect(() => {
     const eventId = trackPixel(
