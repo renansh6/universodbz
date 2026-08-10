@@ -126,8 +126,6 @@ const faq = [
 ];
 
 function Index() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [muted, setMuted] = useState(true);
   const [watching, setWatching] = useState(472);
 
   useEffect(() => {
