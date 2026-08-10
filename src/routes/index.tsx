@@ -128,6 +128,14 @@ const faq = [
 function Index() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
+  const [watching, setWatching] = useState(472);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setWatching((n) => n + Math.floor(Math.random() * 3) + 1);
+    }, 6000);
+    return () => clearInterval(id);
+  }, []);
 
   useEffect(() => {
     const eventId = trackPixel(
@@ -211,15 +219,13 @@ function Index() {
 
         <h1 className="mt-2 text-balance text-2xl leading-[1.05] sm:text-4xl">
           <span className="mb-3 inline-block bg-primary px-3 py-1 text-sm font-bold sm:text-lg">
-            Tenha acesso a todas as animações
+            O UNIVERSO COMPLETO DE DRAGON BALL EM UM SÓ LUGAR
           </span>
-          <br />
-          DE DRAGON BALL
         </h1>
 
         <p className="mx-auto mt-4 max-w-[34ch] text-sm font-semibold text-muted-foreground sm:text-base">
-          Agora você pode assistir a todas as animações e filmes de DRAGON BALL em alta qualidade e
-          sem nenhum anúncio aparecendo na tela!
+          Reviva Dragon Ball, Dragon Ball Z, GT, Super, Daima, filmes, especiais e mangás — com
+          acesso imediato e pagamento único.
         </p>
 
         <p className="mt-7 text-base font-bold text-gold sm:text-lg">
@@ -242,7 +248,8 @@ function Index() {
 
       <section className="mt-8">
         <span className="inline-flex items-center gap-2 rounded-full bg-primary/20 px-3 py-1 text-xs font-bold text-primary">
-          <span className="live-dot inline-block h-1.5 w-1.5 rounded-full bg-primary" />9 assistindo
+          <span className="live-dot inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+          {watching} assistindo
         </span>
 
         <div className="relative mt-3 w-full overflow-hidden rounded-xl">
@@ -412,33 +419,35 @@ function Index() {
           {depoimentos.map((d) => (
             <div key={d.nome} className="rounded-xl border border-border bg-card p-4">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                   {d.iniciais}
                 </span>
-                <div>
-                  <p className="text-sm font-bold">{d.nome}</p>
-                  <p className="text-xs text-muted-foreground">· Via Instagram</p>
+                <div className="min-w-0">
+                  <p className="text-base font-bold">{d.nome}</p>
+                  <p className="text-sm text-muted-foreground">· Via Instagram</p>
                 </div>
               </div>
-              <p className="mt-2 text-sm text-gold">★★★★★</p>
-              <p className="mt-2 text-sm text-muted-foreground">“{d.texto}”</p>
+              <p className="mt-2 text-base text-gold">★★★★★</p>
+              <p className="mt-2 text-base font-medium leading-relaxed text-foreground">
+                “{d.texto}”
+              </p>
             </div>
           ))}
         </div>
 
-        <p className="mt-6 text-sm font-bold">Comentários</p>
+        <p className="mt-6 text-base font-bold">Comentários</p>
         <div className="mt-3 space-y-4">
           {comentarios.map((c) => (
             <div key={c.user} className="flex gap-3">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/20 text-[10px] font-bold text-primary">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary">
                 {c.iniciais}
               </span>
-              <div>
-                <p className="text-sm">
+              <div className="min-w-0">
+                <p className="text-base leading-relaxed">
                   <span className="font-bold">{c.user}</span>{" "}
-                  <span className="text-muted-foreground">comentou: “{c.texto}”</span>
+                  <span className="font-medium text-foreground">comentou: “{c.texto}”</span>
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground">
+                <p className="mt-1 text-sm text-muted-foreground">
                   <span className="text-primary">♡</span> Responder · {c.tempo}
                 </p>
               </div>
