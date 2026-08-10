@@ -419,33 +419,35 @@ function Index() {
           {depoimentos.map((d) => (
             <div key={d.nome} className="rounded-xl border border-border bg-card p-4">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                   {d.iniciais}
                 </span>
-                <div>
-                  <p className="text-sm font-bold">{d.nome}</p>
-                  <p className="text-xs text-muted-foreground">· Via Instagram</p>
+                <div className="min-w-0">
+                  <p className="text-base font-bold">{d.nome}</p>
+                  <p className="text-sm text-muted-foreground">· Via Instagram</p>
                 </div>
               </div>
-              <p className="mt-2 text-sm text-gold">★★★★★</p>
-              <p className="mt-2 text-sm text-muted-foreground">“{d.texto}”</p>
+              <p className="mt-2 text-base text-gold">★★★★★</p>
+              <p className="mt-2 text-base font-medium leading-relaxed text-foreground">
+                “{d.texto}”
+              </p>
             </div>
           ))}
         </div>
 
-        <p className="mt-6 text-sm font-bold">Comentários</p>
+        <p className="mt-6 text-base font-bold">Comentários</p>
         <div className="mt-3 space-y-4">
           {comentarios.map((c) => (
             <div key={c.user} className="flex gap-3">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/20 text-[10px] font-bold text-primary">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary">
                 {c.iniciais}
               </span>
-              <div>
-                <p className="text-sm">
+              <div className="min-w-0">
+                <p className="text-base leading-relaxed">
                   <span className="font-bold">{c.user}</span>{" "}
-                  <span className="text-muted-foreground">comentou: “{c.texto}”</span>
+                  <span className="font-medium text-foreground">comentou: “{c.texto}”</span>
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground">
+                <p className="mt-1 text-sm text-muted-foreground">
                   <span className="text-primary">♡</span> Responder · {c.tempo}
                 </p>
               </div>
