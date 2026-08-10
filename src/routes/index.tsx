@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import heroAsset from "@/assets/hero-goku.png.asset.json";
 import comboAsset from "@/assets/combo-db.jpg.asset.json";
-import videoAsset from "@/assets/video-dbz.mp4.asset.json";
 import { trackPixel, withUtms, getTrackingContext } from "@/lib/tracking";
 import { trackServerEvent } from "@/lib/tracking.functions";
 
