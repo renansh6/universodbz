@@ -211,15 +211,13 @@ function Index() {
 
         <h1 className="mt-2 text-balance text-2xl leading-[1.05] sm:text-4xl">
           <span className="mb-3 inline-block bg-primary px-3 py-1 text-sm font-bold sm:text-lg">
-            Tenha acesso a todas as animações
+            O UNIVERSO COMPLETO DE DRAGON BALL EM UM SÓ LUGAR
           </span>
-          <br />
-          DE DRAGON BALL
         </h1>
 
         <p className="mx-auto mt-4 max-w-[34ch] text-sm font-semibold text-muted-foreground sm:text-base">
-          Agora você pode assistir a todas as animações e filmes de DRAGON BALL em alta qualidade e
-          sem nenhum anúncio aparecendo na tela!
+          Reviva Dragon Ball, Dragon Ball Z, GT, Super, Daima, filmes, especiais e mangás — com
+          acesso imediato e pagamento único.
         </p>
 
         <p className="mt-7 text-base font-bold text-gold sm:text-lg">
